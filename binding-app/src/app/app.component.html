@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-wrap">
+                <h1>My Binding Application</h1>
+                <form role="form">
+                    <!-- First Name TextBox with Property Binding-->
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" [value]="firstName" name="firstName" class="form-control" placeholder="FirstName" #first>
+                    </div>
+                    <!-- Last Name TextBox with Property Binding-->
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" [value]="lastName" name="lastName" class="form-control" placeholder="LastName" #last>
+                    </div>
+                    <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Create Title" (click)="createTitle(first.value,last.value)">
+                </form>
+                <hr/>
+                <div class="form-group">
+                    {{title}}
+                </div>
+            </div>
+        </div>
+        <!-- /.col-xs-12 -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
